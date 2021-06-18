@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
   s.version      = '3.0.0'
-  s.summary      = 'Design by mobius'
+  s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
-TODO: Add long description of the pod here.
+聚合全球优质广告资源，一站式快速接入，轻松变现
                    DESC
   s.homepage     = 'https://www.iusmob.com'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'iusmob' => 'mobius@iusmob.com' }
-  s.source       = { :git => 'https://github.com/iusmob/AdKleinSDK.git', :tag => s.version.to_s }
+  s.source       = { :git => 'https://github.com/iusmob/AdKleinSDK.git', :tag => "v#{s.version.to_s}" }
   s.platform     = :ios
 
   s.ios.deployment_target = '9.0'

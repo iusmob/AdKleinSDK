@@ -1,0 +1,6 @@
+framework module AdKleinCSJAdapter {
+  umbrella header "AdKleinCSJAdapter.h"
+
+  export *
+  module * { export * }
+}

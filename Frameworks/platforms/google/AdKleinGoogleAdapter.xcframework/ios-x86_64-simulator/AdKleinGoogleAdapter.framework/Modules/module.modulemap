@@ -1,0 +1,6 @@
+framework module AdKleinGoogleAdapter {
+  umbrella header "AdKleinGoogleAdapter.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AdMobiusSDK {
+  umbrella header "AdMobiusSDK.h"
+
+  export *
+  module * { export * }
+}

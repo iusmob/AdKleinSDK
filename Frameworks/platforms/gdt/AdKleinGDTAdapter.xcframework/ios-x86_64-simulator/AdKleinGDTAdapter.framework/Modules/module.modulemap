@@ -1,0 +1,6 @@
+framework module AdKleinGDTAdapter {
+  umbrella header "AdKleinGDTAdapter.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AdKleinBQTAdapter {
+  umbrella header "AdKleinBQTAdapter.h"
+
+  export *
+  module * { export * }
+}

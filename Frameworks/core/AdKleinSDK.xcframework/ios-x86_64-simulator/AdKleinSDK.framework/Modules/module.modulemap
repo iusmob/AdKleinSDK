@@ -1,0 +1,6 @@
+framework module AdKleinSDK {
+  umbrella header "AdKleinSDK.h"
+
+  export *
+  module * { export * }
+}

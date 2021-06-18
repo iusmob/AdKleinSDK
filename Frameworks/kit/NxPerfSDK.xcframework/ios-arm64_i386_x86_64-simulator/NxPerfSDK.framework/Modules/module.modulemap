@@ -1,0 +1,6 @@
+framework module NxPerfSDK {
+  umbrella header "NxPerfSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AdKleinSDKFoundation {
+  umbrella header "AdKleinSDKFoundation.h"
+
+  export *
+  module * { export * }
+}

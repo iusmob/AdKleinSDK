@@ -1,0 +1,6 @@
+framework module AdKleinMobiusAdapter {
+  umbrella header "AdKleinMobiusAdapter.h"
+
+  export *
+  module * { export * }
+}

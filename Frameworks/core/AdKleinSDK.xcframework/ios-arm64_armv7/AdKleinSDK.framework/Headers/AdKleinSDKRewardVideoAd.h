@@ -34,6 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ak_rewardVideoAdDidDownload:(AdKleinSDKRewardVideoAd *)rewardVideoAd;
 /**
+ 广告播放中发生错误
+ @param rewardVideoAd 广告加载器实例
+ @param error 错误描述
+*/
+- (void)ak_rewardVideoAdDidRenderFail:(AdKleinSDKRewardVideoAd *)rewardVideoAd withError:(NSError *)error;
+/**
  广告展示
  @param rewardVideoAd 广告加载器实例
 */
@@ -48,6 +54,11 @@ NS_ASSUME_NONNULL_BEGIN
  @param rewardVideoAd 广告加载器实例
 */
 - (void)ak_rewardVideoAdDidSkip:(AdKleinSDKRewardVideoAd *)rewardVideoAd;
+/**
+ 完成奖励发放条件
+ @param rewardVideoAd 广告加载器实例
+*/
+- (void)ak_rewardVideoAdDidRewardEffective:(AdKleinSDKRewardVideoAd *)rewardVideoAd;
 /**
  视频播放完成
  @param rewardVideoAd 广告加载器实例

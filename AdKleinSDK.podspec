@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
-  s.version      = '3.0.1'
+  s.version      = '3.1.0'
   s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
 聚合全球优质广告资源，一站式快速接入，轻松变现
@@ -10,11 +10,9 @@ Pod::Spec.new do |s|
   s.author       = { 'iusmob' => 'mobius@iusmob.com' }
   s.source       = { :git => 'https://github.com/iusmob/AdKleinSDK.git', :tag => "v#{s.version.to_s}" }
   s.platform     = :ios
-
   s.ios.deployment_target = '9.0'
 
   s.frameworks = 'WebKit','Security','QuartzCore','CoreData','ImageIO', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate', 'MessageUI', 'SafariServices', 'UIKit', 'MapKit', 'AudioToolbox','JavaScriptCore'
-
   s.libraries = 'xml2', 'c++', 'c++abi', 'z', 'sqlite3','bz2', 'xml2', 'iconv', 'resolv'
 
   s.default_subspecs = 'core'

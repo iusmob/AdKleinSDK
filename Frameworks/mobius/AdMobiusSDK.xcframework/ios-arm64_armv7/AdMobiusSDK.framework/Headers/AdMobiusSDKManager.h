@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdMobiusSDKManager : NSObject
 
++ (void)debugMode;
 + (void)setAppID:(NSString *)appID;
 + (NSString *)appID;
 

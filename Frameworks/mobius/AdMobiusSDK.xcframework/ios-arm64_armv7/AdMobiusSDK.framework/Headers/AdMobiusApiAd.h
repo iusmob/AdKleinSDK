@@ -25,12 +25,12 @@ typedef NS_ENUM(NSInteger, AdMobiusAdInteractionType) {
 };
 
 typedef NS_ENUM(NSInteger, AdMobiusAdType) {
-    AdMobiusAdTypeSplash = 0,
-    AdMobiusAdTypeBanner = 1,
-    AdMobiusAdTypeInterstitial = 2, ///插屏
-    AdMobiusAdTypeFullVideo = 3, ///全屏
-    AdMobiusAdTypeRewardVideo = 4,  /// 激励视频
-    AdMobiusAdTypeDataFlow = 5,
+    AdMobiusAdTypeSplashAd = 0,
+    AdMobiusAdTypeBannerAd = 1,
+    AdMobiusAdTypeInterstitialAd = 2, ///插屏
+    AdMobiusAdTypeFullVideoAd = 3, ///全屏
+    AdMobiusAdTypeRewardVideoAd = 4,  /// 激励视频
+    AdMobiusAdTypeNativeAd = 5,
 };
 
 // 顶部=1;底部=2;信息流内=3; 中部=4;全屏=5"

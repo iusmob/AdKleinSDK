@@ -19,7 +19,7 @@
 #import "AdKleinSDKNativeAdData.h"
 #import "AdKleinSDKNativeAdView.h"
 
-#import "AdKleinSDKBannerAd.h"
+#import "AdKleinSDKBannerAdView.h"
 
 #import "AdKleinSDKRewardVideoAd.h"
 

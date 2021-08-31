@@ -1,5 +1,5 @@
 //
-//  AdKleinSDKBannerAd.h
+//  AdKleinSDKBannerAdView.h
 //  AdKleinSDK
 //
 //  Created by mac on 2020/8/12.
@@ -11,41 +11,41 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@class AdKleinSDKBannerAd;
+@class AdKleinSDKBannerAdView;
 
-@protocol AdKleinSDKBannerAdDelegate <NSObject>
+@protocol AdKleinSDKBannerAdViewDelegate <NSObject>
 @optional
 
 /**
  广告拉取成功
  @param bannerAd 广告加载器实例
 */
-- (void)ak_bannerAdDidLoad:(AdKleinSDKBannerAd *)bannerAd;
+- (void)ak_bannerAdDidLoad:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告拉取失败
  @param bannerAd 广告加载器实例
  @param error 错误描述
 */
-- (void)ak_bannerAdDidFail:(AdKleinSDKBannerAd *)bannerAd withError:(NSError *)error;
+- (void)ak_bannerAdDidFail:(AdKleinSDKBannerAdView *)bannerAdView withError:(NSError *)error;
 /**
  广告展示
  @param bannerAd 广告加载器实例
 */
-- (void)ak_bannerAdDidShow:(AdKleinSDKBannerAd *)bannerAd;
+- (void)ak_bannerAdDidShow:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告点击
  @param bannerAd 广告加载器实例
 */
-- (void)ak_bannerAdDidClick:(AdKleinSDKBannerAd *)bannerAd;
+- (void)ak_bannerAdDidClick:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告关闭
  @param bannerAd 广告加载器实例
 */
-- (void)ak_bannerAdDidClose:(AdKleinSDKBannerAd *)bannerAd;
+- (void)ak_bannerAdDidClose:(AdKleinSDKBannerAdView *)bannerAdView;
 
 @end
 
-@interface AdKleinSDKBannerAd : AdKleinSDKBaseObject
+@interface AdKleinSDKBannerAdView : AdKleinSDKBaseObject
 
 /**
  [可选]Banner展现和轮播时的动画效果开关，仅在部分上游可选。
@@ -56,21 +56,13 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic) int autoSwitchInterval;
 /**
- [必选]期望的banner视图尺寸
- */
-@property (nonatomic, assign) CGRect bannerFrame;
-/**
  在initWithPlacementId方法中传入的视图控制器
 */
 @property (nonatomic, weak) UIViewController *viewController;
 /**
- [必选]展现横幅广告的容器
-*/
-@property (nonatomic, weak) UIView *adContainer;
-/**
  广告生命周期代理
 */
-@property (nonatomic, weak) id<AdKleinSDKBannerAdDelegate> delegate;
+@property (nonatomic, weak) id<AdKleinSDKBannerAdViewDelegate> delegate;
 
 /**
  构造方法
@@ -79,10 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (instancetype)initWithPlacementId:(NSString *)placementId
                      viewController:(UIViewController *)viewController;
-/**
- 立即移除广告
-*/
-- (void)removeAd;
 
 @end
 

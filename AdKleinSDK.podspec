@@ -1,20 +1,17 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
-  s.version      = '3.1.0'
+  s.version      = '3.2.0'
   s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
 聚合全球优质广告资源，一站式快速接入，轻松变现
                    DESC
   s.homepage     = 'https://www.iusmob.com'
-  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.license      = 'MIT'
   s.author       = { 'iusmob' => 'mobius@iusmob.com' }
   s.source       = { :git => 'https://github.com/iusmob/AdKleinSDK.git', :tag => "v#{s.version.to_s}" }
   s.platform     = :ios
   s.ios.deployment_target = '9.0'
-
-  s.frameworks = 'WebKit','Security','QuartzCore','CoreData','ImageIO', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate', 'MessageUI', 'SafariServices', 'UIKit', 'MapKit', 'AudioToolbox','JavaScriptCore'
-  s.libraries = 'xml2', 'c++', 'c++abi', 'z', 'sqlite3','bz2', 'xml2', 'iconv', 'resolv'
-
+  s.cocoapods_version = '>= 1.10.1'
   s.default_subspecs = 'core'
 
   # base
@@ -46,51 +43,43 @@ Pod::Spec.new do |s|
     #mobius
     sp.subspec 'Mobius' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/mobius/AdKleinMobiusAdapter.xcframework'
-      spsub.dependency 'AdKleinSDK/core'
       spsub.dependency 'AdKleinSDK/AdMobiusSDK'
+      spsub.dependency 'AdKleinSDK/core'
     end
 
     #gdt
     sp.subspec 'GDT' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/gdt/AdKleinGDTAdapter.xcframework'
-      spsub.dependency 'GDTMobSDK', '~> 4.12.61'
+      spsub.dependency 'GDTMobSDK', '~> 4.13.01'
       spsub.dependency 'AdKleinSDK/core'
     end
 
     #csj
     sp.subspec 'CSJ' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/csj/AdKleinCSJAdapter.xcframework'
-      spsub.dependency 'Ads-CN', '~> 3.6.1.5'
+      spsub.dependency 'Ads-CN', '~> 3.8.1.0'
       spsub.dependency 'AdKleinSDK/core'
     end
 
     #baidu
     sp.subspec 'BaiDu' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/bqt/AdKleinBQTAdapter.xcframework'
-      spsub.dependency 'BaiduMobAdSDK', '~> 4.771'
+      spsub.dependency 'BaiduMobAdSDK', '~> 4.81'
       spsub.dependency 'AdKleinSDK/core'
-      spsub.frameworks = 'UIKit', 'MediaPlayer' , 'CoreMedia', 'AVFoundation', 'CoreMotion', 'SafariServices', 'EventKit', 'EventKitUI', 'CoreGraphics', 'MessageUI', 'StoreKit', 'Security', 'WebKit', 'CoreTelephony', 'SystemConfiguration', 'QuartzCore', 'CoreLocation', 'AdSupport'
-      spsub.libraries = 'c++', 'xml2', 'z'
     end
 
     #google
     sp.subspec 'Google' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/google/AdKleinGoogleAdapter.xcframework'
-      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.4.0'
+      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.9.0'
       spsub.dependency 'AdKleinSDK/core'
-      spsub.xcconfig = {
-        'OTHER_LDFLAGS' => '-ObjC'
-      }
     end
 
     #smaato
     sp.subspec 'Smaato' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/smaato/AdKleinSmaatoAdapter.xcframework'
-      spsub.dependency 'smaato-ios-sdk', '~> 21.6.11'
+      spsub.dependency 'smaato-ios-sdk', '~> 21.6.16'
       spsub.dependency 'AdKleinSDK/core'
-      spsub.xcconfig = {
-        'OTHER_LDFLAGS' => '-ObjC'
-      }
     end
   end
 end

@@ -11,6 +11,7 @@
 @interface AdKleinSDKBaseObject : UIView
 /// PerfSDK需要的loadId
 @property(nonatomic, strong) NSString * nxPerfLoadId;
+@property(nonatomic, copy) NSString * placementId;
 /// 不建议对同一个object，多次load
 - (void)load;
 - (void)show;

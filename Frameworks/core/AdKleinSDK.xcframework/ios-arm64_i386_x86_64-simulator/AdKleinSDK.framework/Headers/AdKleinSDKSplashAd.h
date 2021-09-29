@@ -91,6 +91,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger timeout;
 
 /**
+ [可选]占位图
+ 详解：在发起请求到被成功展现前用于填充的占位图，避免当前页面内容先于开屏广告被看到，造成闪屏。默认是App启动图。
+ */
+@property (nonatomic, strong) UIView *placeholderView;
+
+/**
  构造方法
  详解：
  @param placementId 广告位 ID
@@ -103,7 +109,6 @@ NS_ASSUME_NONNULL_BEGIN
  详解：用于自定义跳过按钮点击事件调用
  */
 - (void)removeSplashAd;
-
 
 @end
 

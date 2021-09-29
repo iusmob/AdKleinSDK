@@ -18,28 +18,28 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  广告拉取成功
- @param bannerAd 广告加载器实例
+ @param bannerAdView 广告加载器实例
 */
 - (void)ak_bannerAdDidLoad:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告拉取失败
- @param bannerAd 广告加载器实例
+ @param bannerAdView 广告加载器实例
  @param error 错误描述
 */
 - (void)ak_bannerAdDidFail:(AdKleinSDKBannerAdView *)bannerAdView withError:(NSError *)error;
 /**
  广告展示
- @param bannerAd 广告加载器实例
+ @param bannerAdView 广告加载器实例
 */
 - (void)ak_bannerAdDidShow:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告点击
- @param bannerAd 广告加载器实例
+ @param bannerAdView 广告加载器实例
 */
 - (void)ak_bannerAdDidClick:(AdKleinSDKBannerAdView *)bannerAdView;
 /**
  广告关闭
- @param bannerAd 广告加载器实例
+ @param bannerAdView 广告加载器实例
 */
 - (void)ak_bannerAdDidClose:(AdKleinSDKBannerAdView *)bannerAdView;
 

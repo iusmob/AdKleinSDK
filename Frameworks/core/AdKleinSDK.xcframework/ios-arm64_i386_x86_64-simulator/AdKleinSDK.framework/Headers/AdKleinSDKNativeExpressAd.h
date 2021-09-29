@@ -7,18 +7,26 @@
 //
 
 #import <AdKleinSDK/AdKleinSDK.h>
-#import "AdKleinSDKNativeExpressAdView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class AdKleinSDKNativeExpressAd;
+
+@protocol AdKleinSDKNativeExpressAdViewDelegate
+
+/**
+  渲染广告，穿山甲广告在渲染后才能得到真实高度
+ */
+- (void)render;
+
+@end
 
 @protocol AdKleinSDKNativeExpressAdDelegate <NSObject>
 
 @optional
 /**
  广告拉取成功
- 获取到广告view后，需要根据data数据进行自渲染
+ 获取到广告view后，需要执行render方法进行渲染
  @param nativeExpressAd 广告加载器实例
  @param adViews 模板广告视图数组
 */
@@ -123,6 +131,21 @@ NS_ASSUME_NONNULL_BEGIN
                      viewController:(UIViewController *)viewController;
 
 
+@end
+
+@interface AdKleinSDKNativeExpressAdView : UIView <AdKleinSDKNativeExpressAdViewDelegate>
+/**
+  该广告所属的广告加载器
+ */
+@property (nonatomic, weak) AdKleinSDKNativeExpressAd *adLoader;
+/**
+  信息流广告view的上游原始广告视图
+ */
+@property (nonatomic, strong) id sourceView;
+/**
+  信息流广告view的上游原始广告加载器
+ */
+@property (nonatomic, strong) id sourceLoader;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AdKleinSDKFullScreenVideoAdDelegate <NSObject>
 @optional
 /**
- 广告基础数据拉取成功
+ 广告拉取成功
  @param fullScreenVideoAd 广告加载器实例
 */
 - (void)ak_fullScreenVideoAdDidLoad:(AdKleinSDKFullScreenVideoAd *)fullScreenVideoAd;

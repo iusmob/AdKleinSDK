@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)ak_rewardVideoAdDidFail:(AdKleinSDKRewardVideoAd *)rewardVideoAd withError:(NSError *)error;
 /**
  广告视频数据下载完成。
- 建议在此回调执行show方法。
+ 在此回调后才可执行show方法。
  @param rewardVideoAd 广告加载器实例
 */
 - (void)ak_rewardVideoAdDidDownload:(AdKleinSDKRewardVideoAd *)rewardVideoAd;

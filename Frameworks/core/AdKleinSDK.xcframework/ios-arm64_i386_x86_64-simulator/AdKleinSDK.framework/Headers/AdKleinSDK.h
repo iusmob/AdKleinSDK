@@ -13,7 +13,6 @@
 #import "AdKleinSDKSplashAd.h"
 
 #import "AdKleinSDKNativeExpressAd.h"
-#import "AdKleinSDKNativeExpressAdView.h"
 
 #import "AdKleinSDKNativeAd.h"
 #import "AdKleinSDKNativeAdData.h"

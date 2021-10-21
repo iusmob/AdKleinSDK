@@ -40,9 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (instancetype)initWithFrame:(CGRect)frame;
 /**
- 拉取并展示广告
+ 拉取广告
 */
-- (void)loadAndShow;
+- (void)load;
 
 @end
 

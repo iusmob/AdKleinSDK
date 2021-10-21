@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
-  s.version      = '3.3.1'
+  s.version      = '3.3.2'
   s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
 聚合全球优质广告资源，一站式快速接入，轻松变现
@@ -14,6 +14,8 @@ Pod::Spec.new do |s|
   s.static_framework = true
   s.cocoapods_version = '>= 1.10.2'
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.default_subspecs = 'AdKleinSDKCore'
 
   # base
@@ -52,14 +54,14 @@ Pod::Spec.new do |s|
     #gdt
     sp.subspec 'GDT' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/gdt/AdKleinGDTAdapter.xcframework'
-      spsub.dependency 'GDTMobSDK', '~> 4.13.01'
+      spsub.dependency 'GDTMobSDK', '~> 4.13.22'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
     #csj
     sp.subspec 'CSJ' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/csj/AdKleinCSJAdapter.xcframework'
-      spsub.dependency 'Ads-CN', '~> 3.8.1.0'
+      spsub.dependency 'Ads-CN', '~> 4.0.0.1'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
@@ -74,7 +76,7 @@ Pod::Spec.new do |s|
     sp.subspec 'Google' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/google/AdKleinGoogleAdapter.xcframework'
       spsub.resources = 'Frameworks/platforms/google/AdKleinGoogleAdapterBundle.bundle'
-      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.9.0'
+      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.10.0'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 

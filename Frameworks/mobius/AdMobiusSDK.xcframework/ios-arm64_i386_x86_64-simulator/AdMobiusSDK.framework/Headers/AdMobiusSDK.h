@@ -16,6 +16,7 @@
 #import "AdMobiusRespVideoObject.h"
 
 #import "AdMobiusNativeAd.h"
+#import "AdMobiusNativeExpressAd.h"
 #import "AdMobiusSplashAdView.h"
 #import "AdMobiusBannerAdView.h"
 #import "AdMobiusRewardVideoAd.h"

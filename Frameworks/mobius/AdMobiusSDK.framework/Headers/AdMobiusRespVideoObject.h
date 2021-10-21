@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString * buttonText;
 
 //@ApiModelProperty("视频完成后的URL")
-@property(nonatomic, copy) NSString * endImgUrl;
+@property(nonatomic, copy) NSArray<NSString *> *endImgUrls;
 
 //@ApiModelProperty("视频完成后的结束页面")
 @property(nonatomic, copy) NSString * endHtml;

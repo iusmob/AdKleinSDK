@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, AdMobiusAdStyle) {
     AdMobiusAdStyleText = 1,  // 文字
     AdMobiusAdStyleTextImage = 2, // 静态图片
     AdMobiusAdStyleRichText = 3,   // 图文
+    AdMobiusAdStyleVideo = 4,   // 视频
 };
 
 typedef NS_ENUM(NSInteger, AdMobiusAdInteractionType) {
@@ -42,7 +43,18 @@ typedef NS_ENUM(NSInteger, AdMobiusAdPosition) {
     AdMobiusAdPositionFullScreen = 5,
 };
 
-
+typedef NS_ENUM(NSInteger, AdMobiusAdTemplate) {
+    AdMobiusAdTemplateNativeExpressLeftImageRightText = 2,  // 信息流左图右文
+    AdMobiusAdTemplateNativeExpressLeftTextRightImage = 3, // 信息流左文右图
+    AdMobiusAdTemplateNativeExpressTopImageBottomText = 4,   // 信息流上图下文
+    AdMobiusAdTemplateNativeExpressTopTextBottomImage = 5,   // 信息流上文下图
+    AdMobiusAdTemplateNativeExpressSingleImageFloatText = 6,   // 信息流文字浮层
+    AdMobiusAdTemplateNativeExpressSingleImageSingleText = 7,   // 信息流单图单文
+    AdMobiusAdTemplateNativeExpressThreeImageDoubleText = 8,   // 信息流三小图双文
+    AdMobiusAdTemplateBannerLeftImageRightText = 9,   // 横幅左图右文
+    AdMobiusAdTemplateBannerLeftTextRightImage = 10,   // 横幅左文右图
+    AdMobiusAdTemplateBannerLeftLogoRightText = 11,   // 横幅左logo右文
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -56,6 +68,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 //@ApiModelProperty(value = "广告的交互类型 使用浏览器打开=1; 应用内打开=2; 下载应用=3; deeplink类型=4; 浏览器应用内均可=5; 访问后下载(1nmob)=6", example = "1")
 @property(nonatomic, assign) AdMobiusAdInteractionType interactionType;
+
+//@ApiModelProperty(value = "渲染模板类型", example = "3")
+@property(nonatomic, assign) AdMobiusAdTemplate renderStyle;
 
 //@ApiModelProperty("标题")
 @property(nonatomic, copy) NSString * title;

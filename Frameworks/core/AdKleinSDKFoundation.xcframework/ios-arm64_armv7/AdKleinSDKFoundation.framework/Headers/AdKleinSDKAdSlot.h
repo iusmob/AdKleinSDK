@@ -46,8 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger position;
 @property (nonatomic, assign) NSInteger imgSize;
 
-
-
+@property (nonatomic, assign) CGRect frame;
+@property (nonatomic, assign) NSInteger splashLimitClickArea; // 穿山甲独有字段，控制开屏广告的可点击区域
 
 
 @end

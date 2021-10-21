@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdMobiusSplashAdView : UIView
 
+@property(nonatomic, copy) NSString *slotId;
 /**
  Maximum allowable load timeout, default 3s, unit s.
  */
@@ -31,11 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, weak) UIViewController *rootViewController;
 
-- (instancetype)initWithSlotID:(NSString *)slotID
+- (instancetype)initWithSlotId:(NSString *)slotId
                          frame:(CGRect)frame;
 
 
-- (void)loadAdData;
+- (void)load;
 
 @end
 
@@ -47,32 +48,36 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  This method is called when splash ad material loaded successfully.
  */
-- (void)splashAdDidLoad:(AdMobiusSplashAdView *)splashAd;
+- (void)am_splashAdDidLoad:(AdMobiusSplashAdView *)splashAd;
 
 /**
  This method is called when splash ad material failed to load.
  @param error : the reason of error
  */
-- (void)splashAd:(AdMobiusSplashAdView *)splashAd didFailWithError:(NSError * _Nullable)error;
+- (void)am_splashAdDidFail:(AdMobiusSplashAdView *)splashAd withError:(NSError * _Nullable)error;
 
 /**
  This method is called when splash ad slot will be showing.
  */
-- (void)splashAdDidShow:(AdMobiusSplashAdView *)splashAd;
+- (void)am_splashAdDidShow:(AdMobiusSplashAdView *)splashAd;
 /**
  This method is called when splash ad is clicked.
  */
-- (void)splashAdDidClick:(AdMobiusSplashAdView *)splashAd;
+- (void)am_splashAdDidClick:(AdMobiusSplashAdView *)splashAd;
 
 /**
  This method is called when spalashAd countdown equals to zero
  */
-- (void)splashAdTimeOver:(AdMobiusSplashAdView *)splashAd;
+- (void)am_splashAdTimeOver:(AdMobiusSplashAdView *)splashAd;
 
 /**
  This method is called when spalashAd skip button  is clicked.
  */
-- (void)splashAdDidClickSkip:(AdMobiusSplashAdView *)splashAd;
+- (void)am_splashAdDidSkip:(AdMobiusSplashAdView *)splashAd;
+/**
+ This method is called when splash ad is closed.
+ */
+- (void)am_splashAdDidClose:(AdMobiusSplashAdView *)splashAd;
 
 @end
 

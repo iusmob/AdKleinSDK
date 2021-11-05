@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
-  s.version      = '3.3.2'
+  s.version      = '3.4.0'
   s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
 聚合全球优质广告资源，一站式快速接入，轻松变现
@@ -54,21 +54,21 @@ Pod::Spec.new do |s|
     #gdt
     sp.subspec 'GDT' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/gdt/AdKleinGDTAdapter.xcframework'
-      spsub.dependency 'GDTMobSDK', '~> 4.13.22'
+      spsub.dependency 'GDTMobSDK', '~> 4.13.26'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
     #csj
     sp.subspec 'CSJ' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/csj/AdKleinCSJAdapter.xcframework'
-      spsub.dependency 'Ads-CN', '~> 4.0.0.1'
+      spsub.dependency 'Ads-CN', '~> 4.0.0.5'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
     #baidu
     sp.subspec 'BaiDu' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/bqt/AdKleinBQTAdapter.xcframework'
-      spsub.dependency 'BaiduMobAdSDK', '~> 4.81'
+      spsub.dependency 'BaiduMobAdSDK', '~> 4.83'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
@@ -76,14 +76,14 @@ Pod::Spec.new do |s|
     sp.subspec 'Google' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/google/AdKleinGoogleAdapter.xcframework'
       spsub.resources = 'Frameworks/platforms/google/AdKleinGoogleAdapterBundle.bundle'
-      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.10.0'
+      spsub.dependency 'Google-Mobile-Ads-SDK', '~> 8.12.0'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
 
     #smaato
     sp.subspec 'Smaato' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/smaato/AdKleinSmaatoAdapter.xcframework'
-      spsub.dependency 'smaato-ios-sdk', '~> 21.6.16'
+      spsub.dependency 'smaato-ios-sdk', '~> 21.6.19'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
   end

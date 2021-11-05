@@ -46,6 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, assign) NSInteger tolerateTimeout;
 /**
+ 视频是否静音，默认为NO
+*/
+@property (nonatomic, assign) BOOL videoMuted;
+/**
  [必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
 */
 @property (nonatomic, weak) UIViewController *controller;

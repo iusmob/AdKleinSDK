@@ -84,11 +84,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIView* skipView;
 
 /**
- [可选]拉取广告超时时间，默认为3秒
- 详解：拉取广告超时时间，开发者调用loadAd方法以后会立即展示backgroundImage，然后在该超时时间内，如果广告拉
- 取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
+ [可选]请求超时时间，默认为4秒，请设置不低于3秒的值，以免影响收益
+ 详解：拉取广告超时时间，开发者调用load方法以后会立即展示占位图，在该超时时间内，如果广告拉取成功，则展示开屏广告，否则放弃此次广告展示机会。
  */
-@property (nonatomic, assign) NSInteger timeout;
+@property (nonatomic, assign) NSInteger tolerateTimeout;
 
 /**
  [可选]占位图

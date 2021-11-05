@@ -73,6 +73,10 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, assign) NSInteger adCount;
 /**
+ [可选]请求超时时间，默认为4秒，请设置不低于3秒的值，以免影响收益
+ */
+@property (nonatomic, assign) NSInteger tolerateTimeout;
+/**
    获取到的广告视图数组
 */
 @property(nonatomic, strong) NSArray *adViews;

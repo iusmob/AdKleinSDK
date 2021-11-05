@@ -82,6 +82,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) BOOL videoMuted;
 /**
+ [可选]请求超时时间，默认为4秒，请设置不低于3秒的值，以免影响收益
+ */
+@property (nonatomic, assign) NSInteger tolerateTimeout;
+/**
  在initWithPlacementId方法中传入的视图控制器
 */
 @property (nonatomic, weak) UIViewController *viewController;

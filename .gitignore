@@ -4,5 +4,4 @@ node_modules
 .husky
 commitlint.config.js
 package.json
-CHANGELOG.md
 /lint.log

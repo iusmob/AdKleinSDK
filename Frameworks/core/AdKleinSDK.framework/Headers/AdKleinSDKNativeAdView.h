@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
   信息流广告view的上游原始广告视图
  */
 @property (nonatomic, strong) id sourceView;
+/**
+  信息流广告view的上游原始广告对象
+ */
+@property (nonatomic, strong) id sourceAd;
 
 @end
 

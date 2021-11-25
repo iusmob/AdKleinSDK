@@ -8,4 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <AdKleinSDKFoundation/AdKleinSDKAdSlot.h>
+#import "AdKleinSDKAdSlot.h"
+#import "AdKleinSDKLogManager.h"
+#import "AMPromises.h"

@@ -27,6 +27,23 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ak_fullScreenVideoAdDidFail:(AdKleinSDKFullScreenVideoAd *)fullScreenVideoAd withError:(NSError *)error;
 /**
+ 广告视频数据下载完成。
+ 在此回调后才可执行show方法。
+ @param fullScreenVideoAd 广告加载器实例
+*/
+- (void)ak_fullScreenVideoAdDidDownload:(AdKleinSDKFullScreenVideoAd *)fullScreenVideoAd;
+/**
+ 广告渲染成功
+ @param fullScreenVideoAd 广告加载器实例
+*/
+- (void)ak_fullScreenVideoAdDidRenderSuccess:(AdKleinSDKFullScreenVideoAd *)fullScreenVideoAd;
+/**
+ 广告播放中发生错误
+ @param fullScreenVideoAd 广告加载器实例
+ @param error 错误描述
+*/
+- (void)ak_fullScreenVideoAdDidRenderFail:(AdKleinSDKFullScreenVideoAd *)fullScreenVideoAd withError:(NSError *)error;
+/**
  广告展示
  @param fullScreenVideoAd 广告加载器实例
 */

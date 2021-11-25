@@ -27,6 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ak_interstitialAdDidFail:(AdKleinSDKInterstitialAd *)interstitialAd withError:(NSError *)error;
 /**
+ 广告视频数据下载完成。
+ 在此回调后才可执行show方法。
+ @param interstitialAd 广告加载器实例
+*/
+- (void)ak_interstitialAdDidDownload:(AdKleinSDKInterstitialAd *)interstitialAd;
+/**
  广告渲染成功
  @param interstitialAd 广告加载器实例
 */

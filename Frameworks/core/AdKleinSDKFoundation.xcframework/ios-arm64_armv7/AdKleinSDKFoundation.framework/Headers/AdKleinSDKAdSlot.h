@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) NSString *slotId;
 @property(nonatomic, assign) NSInteger tolerateTimeout;
 
+@property(nonatomic, assign) CGSize adSize;
+@property(nonatomic, assign) BOOL muted;
+
 /// Point
 @property(nonatomic, assign) NSInteger width;
 @property(nonatomic, assign) NSInteger height;

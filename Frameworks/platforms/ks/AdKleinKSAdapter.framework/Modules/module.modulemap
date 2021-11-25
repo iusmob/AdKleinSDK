@@ -1,0 +1,6 @@
+framework module AdKleinKSAdapter {
+  umbrella header "AdKleinKSAdapter.h"
+
+  export *
+  module * { export * }
+}

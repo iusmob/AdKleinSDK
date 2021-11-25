@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AdKleinSDK'
-  s.version      = '3.4.0'
+  s.version      = '3.5.0'
   s.summary      = '莫比乌斯广告聚合SDK'
   s.description  = <<-DESC
 聚合全球优质广告资源，一站式快速接入，轻松变现
@@ -84,6 +84,13 @@ Pod::Spec.new do |s|
     sp.subspec 'Smaato' do |spsub|
       spsub.vendored_frameworks = 'Frameworks/platforms/smaato/AdKleinSmaatoAdapter.xcframework'
       spsub.dependency 'smaato-ios-sdk', '~> 21.6.19'
+      spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
+    end
+
+    #ks
+    sp.subspec 'KS' do |spsub|
+      spsub.vendored_frameworks = 'Frameworks/platforms/ks/AdKleinKSAdapter.xcframework'
+      spsub.dependency 'KSAdSDK', '~> 3.3.17'
       spsub.dependency 'AdKleinSDK/AdKleinSDKCore'
     end
   end

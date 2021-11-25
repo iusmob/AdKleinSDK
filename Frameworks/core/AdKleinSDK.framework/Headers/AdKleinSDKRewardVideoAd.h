@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ak_rewardVideoAdDidDownload:(AdKleinSDKRewardVideoAd *)rewardVideoAd;
 /**
+ 广告渲染成功
+ @param rewardVideoAd 广告加载器实例
+*/
+- (void)ak_rewardVideoAdDidRenderSuccess:(AdKleinSDKRewardVideoAd *)rewardVideoAd;
+/**
  广告播放中发生错误
  @param rewardVideoAd 广告加载器实例
  @param error 错误描述

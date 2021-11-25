@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param adView 模板广告视图
  */
 - (void)ak_nativeExpressAdDidRenderFail:(AdKleinSDKNativeExpressAd *)nativeExpressAd
-                       adView:(__kindof UIView<AdKleinSDKNativeExpressAdViewDelegate> *)adView;
+                                 adView:(__kindof UIView<AdKleinSDKNativeExpressAdViewDelegate> *)adView withError:(NSError *)error;
 /**
  广告展现
  @param nativeExpressAd 广告加载器实例
@@ -147,9 +147,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) id sourceView;
 /**
-  信息流广告view的上游原始广告加载器
+  信息流广告view的上游原始广告数据对象
  */
-@property (nonatomic, strong) id sourceLoader;
+@property (nonatomic, strong) id sourceData;
 @end
 
 NS_ASSUME_NONNULL_END

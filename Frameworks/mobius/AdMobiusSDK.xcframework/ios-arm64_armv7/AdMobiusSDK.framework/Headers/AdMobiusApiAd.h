@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, AdMobiusAdType) {
     AdMobiusAdTypeSplashAd = 0,
     AdMobiusAdTypeBannerAd = 1,
     AdMobiusAdTypeInterstitialAd = 2, ///插屏
-    AdMobiusAdTypeFullVideoAd = 3, ///全屏
+    AdMobiusAdTypeFullScreenVideoAd = 3, ///全屏
     AdMobiusAdTypeRewardVideoAd = 4,  /// 激励视频
     AdMobiusAdTypeNativeAd = 5,
 };
@@ -54,6 +54,8 @@ typedef NS_ENUM(NSInteger, AdMobiusAdTemplate) {
     AdMobiusAdTemplateBannerLeftImageRightText = 9,   // 横幅左图右文
     AdMobiusAdTemplateBannerLeftTextRightImage = 10,   // 横幅左文右图
     AdMobiusAdTemplateBannerLeftLogoRightText = 11,   // 横幅左logo右文
+    AdMobiusAdTemplateInterstitialTopImageBottomText = 14, // 插屏上图下文
+    AdMobiusAdTemplateInterstitialLeftImageRightText = 15,  // 插屏左图右文
 };
 
 NS_ASSUME_NONNULL_BEGIN

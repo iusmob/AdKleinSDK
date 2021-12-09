@@ -12,6 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, AdMobiusSplashButtonType) {
+    AdMobiusSplashButtonType_FullScreen  = 1,  // The whole area of splash view will respond to click event
+    AdMobiusSplashButtonType_DownloadBar = 2   // The area of download bar in splash view will respond to click event
+};
 
 @interface AdMobiusSplashAdView : UIView
 
@@ -31,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
  Root view controller for handling ad actions.
  */
 @property(nonatomic, weak) UIViewController *rootViewController;
+
+@property (nonatomic, assign) AdMobiusSplashButtonType splashButtonType;
 
 - (instancetype)initWithSlotId:(NSString *)slotId
                          frame:(CGRect)frame;

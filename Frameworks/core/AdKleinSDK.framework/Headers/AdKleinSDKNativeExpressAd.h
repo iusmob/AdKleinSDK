@@ -98,26 +98,9 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, assign) NSInteger adCount;
 /**
- [可选]非 WiFi 网络是否自动播放。默认 NO。loadAd 前设置。
-*/
-@property (nonatomic, assign) BOOL videoAutoPlayOnWWAN;
-/**
- [可选]自动播放时，是否静音。默认 YES。loadAd 前设置。
+ [可选]播放视频是否静音，默认YES，仅部分上游有效
 */
 @property (nonatomic, assign) BOOL videoMuted;
-/**
- [可选]视频详情页播放时是否静音。默认NO。loadAd 前设置。
- */
-@property (nonatomic, assign) BOOL detailPageVideoMuted;
-/**
- [可选]请求视频的时长下限，视频时长有效值范围为[5,60]。
- 以下两种情况会使用系统默认的最小值设置，1:不设置  2:minVideoDuration大于maxVideoDuration
-*/
-@property (nonatomic) NSInteger minVideoDuration;
-/**
- [可选]请求视频的时长上限，视频时长有效值范围为[5,60]。
- */
-@property (nonatomic) NSInteger maxVideoDuration;
 /**
  [可选]请求超时时间，默认为4秒，请设置不低于3秒的值，以免影响收益
  */

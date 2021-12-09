@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, weak) UIViewController *controller;
 /**
+ 视频是否静音，默认为NO
+*/
+@property (nonatomic, assign) BOOL videoMuted;
+/**
  拉取广告
 */
 - (void)load;
@@ -60,7 +64,12 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)am_rewardVideoAdDidDownload:(AdMobiusRewardVideoAd *)rewardVideoAd;
 /**
- 广告播放中发生错误
+ 广告渲染成功。
+ @param rewardVideoAd 广告加载器实例
+*/
+- (void)am_rewardVideoAdDidRenderSuccess:(AdMobiusRewardVideoAd *)rewardVideoAd;
+/**
+ 广告渲染或播放中发生错误
  @param rewardVideoAd 广告加载器实例
  @param error 错误描述
 */

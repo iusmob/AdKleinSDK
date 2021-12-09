@@ -20,3 +20,5 @@
 #import "AdMobiusSplashAdView.h"
 #import "AdMobiusBannerAdView.h"
 #import "AdMobiusRewardVideoAd.h"
+#import "AdMobiusInterstitialAd.h"
+#import "AdMobiusFullScreenVideoAd.h"

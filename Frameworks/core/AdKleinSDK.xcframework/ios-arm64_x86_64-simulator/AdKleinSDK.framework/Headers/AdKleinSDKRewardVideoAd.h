@@ -83,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, weak) id<AdKleinSDKRewardVideoAdDelegate> delegate;
 /**
- [可选]播放视频是否静音
+ [可选]播放视频是否静音，仅部分上游有效
  */
 @property (nonatomic) BOOL videoMuted;
 /**

@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.3](https://github.com/iusmob/AdKleinSDK/compare/v3.5.1...v3.5.3) (2022-03-07)
+
 ### [3.5.1](https://github.com/iusmob/AdKleinSDK/compare/v3.5.0...v3.5.1) (2021-12-09)
 
 ## [3.5.0](https://github.com/iusmob/AdKleinSDK/compare/v3.4.0...v3.5.0) (2021-11-25)
